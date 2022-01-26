@@ -26,10 +26,9 @@ public class Person {
     @Embedded
     private Address address;
     @Column(name =  "brith_date",nullable = false)
-    private Date brithDate;
-
+    private Date birthDate;
     @OneToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, orphanRemoval = true)
     @JoinColumn(name = "person_id")
-    private List<Phone> phones = new ArrayList<>();
+    private List<Phone> phones;
 
 }
