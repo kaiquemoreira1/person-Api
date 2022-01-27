@@ -21,7 +21,7 @@ public class AddressDto {
     @NotNull
     private int number;
     @NotEmpty
-    @Size(min = 2, max = 50)
+    @Size(min = 1, max = 50)
     private String complement;
     @NotEmpty
     @Size(min = 2, max = 50)
@@ -33,6 +33,6 @@ public class AddressDto {
     @Size(min = 2, max = 50)
     private String state;
     @NotEmpty
-    @Size(min = 7, max = 7)
+    @Size(min = 8, max = 8)
     private String postalCode;
 }
