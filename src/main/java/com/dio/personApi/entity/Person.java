@@ -21,15 +21,14 @@ public class Person {
     private String firstName;
     @Column(name = "last_name",nullable = false)
     private String lastName;
-    @Column(name = "cpf", length = 11,nullable = false)
+    @Column(name = "cpf", length = 11,nullable = false, unique = true)
     private String cpf;
     @Embedded
     private Address address;
     @Column(name =  "brith_date",nullable = false)
-    private Date brithDate;
-
+    private Date birthDate;
     @OneToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, orphanRemoval = true)
     @JoinColumn(name = "person_id")
-    private List<Phone> phones = new ArrayList<>();
+    private List<Phone> phones;
 
 }

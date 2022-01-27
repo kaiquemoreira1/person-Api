@@ -17,6 +17,7 @@ public class Phone {
     @Column(name = "id", nullable = false)
     private Long id;
     @Column(name = "phone_type",nullable = false)
+    @Enumerated(EnumType.STRING)
     private PhoneType type;
     @Column(name = "phone_number",nullable = false)
     private String number;
