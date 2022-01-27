@@ -27,12 +27,10 @@ public class PersonDto extends RepresentationModel<PersonDto> {
     @CPF
     private String cpf;
     @Valid
-    @NotEmpty
     private AddressDto address;
     @NotNull
     private Date birthDate;
     @Valid
-    @NotEmpty
     private List<PhoneDto> phones;
 }
 
